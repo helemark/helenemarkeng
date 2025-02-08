@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { useSudoku } from "./contexts/SudokuContext";
+import { useSudoku } from "../contexts/SudokuContext";
 import styles from "./SudokuBoard.module.css"; // Import CSS module
 
 const SudokuBoard: React.FC = () => {
@@ -31,6 +31,7 @@ const SudokuBoard: React.FC = () => {
       <div className={styles.buttonContainer}>
         <button className={styles.button}>Solve It!</button>
         <button className={styles.button}>Clear All</button>
+        <button className={styles.button}>Upload photo</button>
       </div>
     </div>
   );

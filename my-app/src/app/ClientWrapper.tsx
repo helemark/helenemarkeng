@@ -1,7 +1,7 @@
 "use client"; // ✅ This ensures all children are client components
 
 import { SudokuProvider } from "./contexts/SudokuContext";
-import SudokuBoard from "./SudokuBoard";
+import SudokuBoard from "./conponents/SudokuBoard";
 
 export default function ClientWrapper() {
   return (
