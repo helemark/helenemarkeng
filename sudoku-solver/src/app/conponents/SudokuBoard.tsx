@@ -2,10 +2,13 @@
 
 import React from "react";
 import { useSudoku } from "../contexts/SudokuContext";
-import styles from "./SudokuBoard.module.css"; // Import CSS module
+import styles from "./SudokuBoard.module.css";
+import SudokuButtons from "./SudokuButtons";
 
 const SudokuBoard: React.FC = () => {
   const { board, updateCell } = useSudoku();
+
+  if (!board) return <p className="text-red-500">Loading board...</p>; // ✅ Prevents crash on undefined board
 
   return (
     <div className={styles.container}>
@@ -27,12 +30,7 @@ const SudokuBoard: React.FC = () => {
           ))
         )}
       </div>
-
-      <div className={styles.buttonContainer}>
-        <button className={styles.button}>Solve It!</button>
-        <button className={styles.button}>Clear All</button>
-        <button className={styles.button}>Upload photo</button>
-      </div>
+      <SudokuButtons />
     </div>
   );
 };

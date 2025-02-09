@@ -1,82 +1,52 @@
 /* SudokuBoard.module.css */
 
-/* Constants */
-:root {
-    --borderColor: rgb(36, 90, 57);
-    --backgroundColor: white;
-    --cellColor: white;
-    --focusColor: #e0e0e0;
-    --textColor: #333;
-    --buttonColor: rgb(36, 90, 57);
-    --buttonHoverColor: rgb(56, 133, 86);
-  }
-  
-  /* Styles */
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #f9f9f9;
-  }
-  
-  .title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 16px;
-    color: #333;
-  }
-  
-  .sudokuGrid {
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    border: 4px solid var(--borderColor);
-    background: var(--backgroundColor);
-  }
-  
-  .cell {
-    width: 50px;
-    height: 50px;
-    font-size: 20px;
-    color: var(--textColor);
-    text-align: center;
-    font-weight: bold;
-    border: 1px solid gray;
-    outline: none;
-    background-color: var(--cellColor);
-  }
-  
-  .cell:focus {
-    background-color: var(--focusColor);
-  }
-  
-  .borderRight {
-    border-right: 3px solid var(--borderColor);
-  }
-  
-  .borderBottom {
-    border-bottom: 3px solid var(--borderColor);
-  }
-  
-  .buttonContainer {
-    margin-top: 20px;
-    display: flex;
-    gap: 10px;
-  }
-  
-  .button {
-    padding: 10px 16px;
-    font-size: 16px;
-    font-weight: bold;
-    color: white;
-    background-color: var(--buttonColor);
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: 0.2s;
-  }
-  
-  .button:hover {
-    background-color: var(--buttonHoverColor);
-  }
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Centers content */
+  height: 100vh;
+  background-color: #f9f9f9;
+  position: relative; /* Prevents unnecessary pushing */
+  columns: #333;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.sudokuGrid {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  border: 4px solid rgb(25, 80, 61);
+  background: white;
+  margin-bottom: 20px; /* Adds space before buttons */
+  color: #333;
+}
+
+.cell {
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  border: 1px solid rgb(25, 80, 61);
+  outline: none;
+  background-color: white;
+  color: #333;
+}
+
+.cell:focus {
+  background-color: #e0e0e0;
+}
+
+.borderRight {
+  border-right: 3px solid rgb(25, 80, 61);
+}
+
+.borderBottom {
+  border-bottom: 3px solid rgb(25, 80, 61);
+}

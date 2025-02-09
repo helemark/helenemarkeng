@@ -1,5 +1,11 @@
 import ClientWrapper from "./ClientWrapper";
+import { SudokuProvider } from "./contexts/SudokuContext";
+
 
 export default function Home() {
-  return <ClientWrapper />;
+  return (
+    <SudokuProvider> 
+      <ClientWrapper />
+    </SudokuProvider>
+  );
 }

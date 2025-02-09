@@ -1,2 +1,2 @@
 # helenemarkeng
-Personal website
+This is made solely for learning purposes...
